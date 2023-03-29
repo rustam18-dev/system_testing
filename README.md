@@ -8,12 +8,12 @@
 </p>
 
 ## About Laravel
-<p>composer install</p>
+<p><b>1)</b> composer install</p>
 <hr>
-<p>cp .env.example .env</p>
+<p><b>2)</b> cp .env.example .env</p>
 <hr>
-<p>php artisan key:generate</p>
+<p><b>3)</b> php artisan key:generate</p>
 <hr>
-<p>php artisan migrate:fresh</p>
+<p><b>4)</b> php artisan migrate:fresh</p>
 <hr>
-<p>php artisan serve</p>
+<p><b>5)</b> php artisan serve</p>
