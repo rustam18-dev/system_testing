@@ -8,6 +8,12 @@
 </p>
 
 ## About Laravel
-
-cp .env.example .env
-php artisan key:generate
+<p>composer install</p>
+<hr>
+<p>cp .env.example .env</p>
+<hr>
+<p>php artisan key:generate</p>
+<hr>
+<p>php artisan migrate:fresh</p>
+<hr>
+<p>php artisan serve</p>
