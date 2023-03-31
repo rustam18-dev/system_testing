@@ -13,3 +13,6 @@ Route::get('/', function () {
 Route::resource('/subject', SubjectController::class);
 Route::resource('/lang', LangController::class);
 Route::resource('/theme', ThemeController::class);
+
+Auth::routes();
+

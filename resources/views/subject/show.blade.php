@@ -9,5 +9,7 @@
         @csrf
         @method('DELETE')
         <input type="submit" value="Удалить" class="btn btn-danger">
+        <a href="/subject/{{$subject->id}}/edit" class="btn btn-success ml-2">Изменить</a>
     </form>
+
 @endsection

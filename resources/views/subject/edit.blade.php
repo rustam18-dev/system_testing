@@ -12,7 +12,6 @@
             <select name="lang_id" class="form-select form-select-sm" aria-label=".form-select-sm example">
                 <option  selected disabled >Выбрать предмет</option>
                 @foreach($lang as $langs)
-
                     <option value="{{$langs->id}}">{{$langs->name}}</option>
                 @endforeach
             </select>
