@@ -40,4 +40,5 @@
         >Добавить язык</a
         >
     </div>
+	update for rustam
 @endsection
