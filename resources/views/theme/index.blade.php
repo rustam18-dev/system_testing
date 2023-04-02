@@ -1,15 +1,45 @@
 @extends('layout.master')
 
 @section('content')
-    <div class="ml-2 mt-1">
-        @forelse($theme as $themes)
-            <a href="/theme/{{$themes->id}}"><h4 class="font-weight-bold">{{$themes->name}}</h4></a>
-                 <p>{{$themes->subject->name}}</p>
-            <hr>
-        @empty
-           <p>Записей нету, для того, чтобы добавить запись нажмите  <a class="badge badge-success border" href="/theme/create">сюда</a></p>
-        @endforelse
-
+    <div class="content-wrapper">
+        <div class="container-xxl flex-grow-1 container-p-y">
+            @include('layout.message')
+            <div class="card">
+                <h5 class="card-header">Responsive Table</h5>
+                <div class="table-responsive text-nowrap">
+                    <table class="table">
+                        <thead>
+                        <tr class="text-nowrap">
+                            <th>#</th>
+                            <th>Язык</th>
+                            <th>Описание</th>
+                            <th>Предмет</th>
+                            <th>Параметр</th>
+                        </tr>
+                        </thead>
+                             @foreach($theme as $themes)
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">{{$themes->id}}</th>
+                                        <td>{{$themes->name}}</td>
+                                        <td>{{$themes->description}}</td>
+                                        <td>{{$themes->subject->name}}</td>
+                                        <td><a href="/theme/{{$themes->id}}" class="btn btn-primary">Детальнее</a></td>
+                                    </tr>
+                                </tbody>
+                            @endforeach
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <div class="buy-now">
+        <a
+                href="/theme/create"
+                target="_self"
+                class="btn btn-danger btn-buy-now"
+        >Добавить статус</a
+        >
+    </div>
 @endsection

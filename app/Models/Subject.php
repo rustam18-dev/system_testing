@@ -12,8 +12,12 @@ class Subject extends Model
 
     public function lang()
     {
-        return $this->belongsTo(Lang::class);
+        return $this->belongsTo(Lang::class, 'lang_id');
     }
 
+    public function statuses()
+    {
+        return $this->belongsTo(Status::class, 'status');
+    }
 
 }

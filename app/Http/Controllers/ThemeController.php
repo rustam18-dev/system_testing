@@ -42,10 +42,11 @@ class ThemeController extends Controller
     {
         $theme = new Theme;
         $theme->name = $request->input('name');
+        $theme->description = $request->input('description');
         $theme->subject_id = $request->input('subject_id');
         $theme->save();
 
-        return redirect('/theme');
+        return redirect('/theme')->with('success', 'Запись успешно создан!');
     }
 
     /**
@@ -82,10 +83,11 @@ class ThemeController extends Controller
     {
         $theme = Theme::findOrFail($id);
         $theme->name = $request->input('name');
+        $theme->description = $request->input('description');
         $theme->subject_id = $request->input('subject_id');
         $theme->update();
 
-        return redirect('/theme');
+        return redirect('/theme')->with('warning', 'Запись успешно обновлён!');
     }
 
     /**
@@ -98,6 +100,6 @@ class ThemeController extends Controller
     {
         $theme->delete();
 
-        return redirect('/theme');
+        return redirect('/theme')->with('danger', 'Данные успешно удалены!');
     }
 }

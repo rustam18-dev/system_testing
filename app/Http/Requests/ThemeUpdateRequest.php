@@ -26,6 +26,7 @@ class ThemeUpdateRequest extends FormRequest
     {
         return [
             'name' => 'required',
+            'description' => '',
             'subject_id' => 'required',
         ];
     }

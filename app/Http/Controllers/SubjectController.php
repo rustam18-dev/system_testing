@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\SubjectStoreRequest;
 use App\Http\Requests\SubjectUpdateRequest;
 use App\Models\Lang;
+use App\Models\Status;
 use App\Models\Subject;
 use Illuminate\Http\Request;
 
@@ -29,7 +30,8 @@ class SubjectController extends Controller
     public function create()
     {
         $lang = Lang::all();
-        return view('subject.create', compact('lang'));
+        $status = Status::all();
+        return view('subject.create', compact('lang', 'status'));
     }
 
     /**
@@ -44,9 +46,10 @@ class SubjectController extends Controller
         $subject->name = $request->input('name');
         $subject->description = $request->input('description');
         $subject->lang_id = $request->input('lang_id');
+        $subject->status = $request->input('status');
         $subject->save();
 
-        return redirect('/subject');
+        return redirect('/subject')->with('success', 'Запись успешно создан!');
     }
 
     /**
@@ -69,7 +72,8 @@ class SubjectController extends Controller
     public function edit(Subject $subject)
     {
         $lang = Lang::all();
-        return view('subject.edit', compact('subject', 'lang'));
+        $status = Status::all();
+        return view('subject.edit', compact('subject', 'lang', 'status'));
     }
 
     /**
@@ -88,7 +92,7 @@ class SubjectController extends Controller
         $subject->status = $request->input('status');
         $subject->update();
 
-        return redirect('/subject');
+        return redirect('/subject')->with('warning', 'Запись успешно обновлён!');
     }
 
     /**
@@ -101,6 +105,6 @@ class SubjectController extends Controller
     {
         $subject->delete();
 
-        return redirect('/subject');
+        return redirect('/subject')->with('danger', 'Данные успешно удалены!');
     }
 }

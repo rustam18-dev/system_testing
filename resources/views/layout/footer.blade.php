@@ -1,14 +1,40 @@
-<footer class="footer">
-    <div class="d-sm-flex justify-content-center justify-content-sm-between">
-        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2018 <a href="https://www.templatewatch.com/" target="_blank">Templatewatch</a>. All rights reserved.</span>
-        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="ti-heart text-danger ml-1"></i></span>
+<footer class="content-footer footer bg-footer-theme">
+    <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
+        <div class="mb-2 mb-md-0">
+            ©
+            <script>
+                document.write(new Date().getFullYear());
+            </script>
+            , made with ❤️ by
+            <a href="https://themeselection.com" target="_blank" class="footer-link fw-bolder">ThemeSelection</a>
+        </div>
+        <div>
+            <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
+            <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More Themes</a>
+
+            <a
+                    href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
+                    target="_blank"
+                    class="footer-link me-4"
+            >Documentation</a
+            >
+
+            <a
+                    href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
+                    target="_blank"
+                    class="footer-link me-4"
+            >Support</a
+            >
+        </div>
     </div>
 </footer>
 
-<script src="{{asset('/vendors/base/vendor.bundle.base.js')}}"></script>
-<script src="{{asset('/vendors/chart.js/Chart.min.js')}}"></script>
-<script src="{{asset('/js/off-canvas.js')}}"></script>
-<script src="{{asset('/js/hoverable-collapse.js')}}"></script>
-<script src="{{asset('/js/template.js')}}"></script>
-<script src="{{asset('/js/todolist.js')}}"></script>
-<script src="{{asset('/js/dashboard.js')}}"></script>
+<script src="/../assets/vendor/libs/jquery/jquery.js"></script>
+<script src="/../assets/vendor/libs/popper/popper.js"></script>
+<script src="/../assets/vendor/js/bootstrap.js"></script>
+<script src="/../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+<script src="/../assets/vendor/js/menu.js"></script>
+<script src="/../assets/vendor/libs/apex-charts/apexcharts.js"></script>
+<script src="/../assets/js/main.js"></script>
+<script src="/../assets/js/dashboards-analytics.js"></script>
+<script async defer src="https://buttons.github.io/buttons.js"></script>

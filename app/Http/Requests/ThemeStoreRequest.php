@@ -25,6 +25,7 @@ class ThemeStoreRequest extends FormRequest
     {
         return [
             'name' => 'required',
+            'description' => '',
             'subject_id' => 'required',
         ];
     }

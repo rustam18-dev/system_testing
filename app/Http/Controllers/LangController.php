@@ -42,7 +42,7 @@ class LangController extends Controller
         $lang->name = $request->input('name');
         $lang->save();
 
-        return redirect('/lang');
+        return redirect('/lang')->with('success', 'Запись успешно создан!');
     }
 
     /**
@@ -80,7 +80,7 @@ class LangController extends Controller
         $lang->name = $request->input('name');
         $lang->update();
 
-        return redirect('/lang');
+        return redirect('/lang')->with('warning', 'Запись успешно обновлён!');
     }
 
     /**
@@ -93,6 +93,6 @@ class LangController extends Controller
     {
         $lang->delete();
 
-        return redirect('/lang');
+        return redirect('/lang')->with('danger', 'Данные успешно удалены!');
     }
 }
